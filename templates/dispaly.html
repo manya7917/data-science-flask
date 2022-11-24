@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+        margin: 0%;
+    }
+        .topnav {
+  background-color: #333;
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: rgba(255, 0, 72, 0.3);
+  color: white;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: rgba(255, 0, 0, 0.5);
+  color: white;
+}
+.graph{
+    height: 60vh;
+        width: 100%;
+        display: flex;
+}
+.g1{
+    height: 70vh;
+        width: 45%;
+        display: flex;
+
+/* background: #B5360E; */
+}
+.g2{
+    height: 70vh;
+        width: 45%;
+        
+
+
+background: white;
+}
+.g1 img{
+    height: 90%;
+        width: 90%;
+}
+.g2a{
+    height: 6.5%;
+    width: 100%;
+    background-color: white;
+    /* border-radius: 5%; */
+    box-shadow: 5px 5px 10px 2px rgba(0,0,0,.5);
+}
+table,th,td {
+            border: 1px solid black;
+         }
+table th{
+    width: 11%;
+}
+table td{
+    width: 15%;
+}
+.section2{
+    height: 90%;
+    width: 100%;
+    background-color: #333;
+    margin-top: 65px;
+}
+.section2 h1{
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.g2 h2{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+    </style>
+</head>
+<body>
+    <div calss="main">
+        <div class="topnav">
+            <a class="active" href="/">Home</a>
+            <a href="/transaction">Transaction</a>
+            <a href="#contact">Contact</a>
+            <a href="#about">About</a>
+          </div>
+          <div class="graph">
+            <div class="g1">
+                <img src="/static/my_pie.png" alt="">
+            </div>
+            <div class="g2">
+                <br><center><h2>PAYMENT ANALYTICS</h2></center><br><br>
+                <table class="table " >
+                    <thead>
+                      <!-- <tr>
+                        <th scope="col">id</th>
+                        <th scope="col">name</th>
+                      </tr> -->
+                    </thead>
+                    <center><tbody>
+                {% for key, value in data.items() %}
+                  <tr>
+                    <th scope="row"><h2>{{ key }}</h2></th>
+                    <td><h2>{{ value }}</h2></td>
+                  </tr>
+                  {% endfor %}
+                </tbody></center>
+                </table>
+                <!-- <div class="g2a"><h2>Food : {{food_per}}</h2></div><br>
+                <div class="g2a"><h2>Medical : {{tran_per}}</h2></div><br>
+                <div class="g2a"><h2>Online : {{online_per}}</h2></div><br>
+                <div class="g2a"><h2>Travel : {{travel_per}}</h2></div><br>
+                <div class="g2a"><h2>Friends : {{friends_per}}</h2></div><br>
+                <div class="g2a"><h2>Entertainment : {{en_per}}</h2></div><br>
+                <div class="g2a"><h2>Academics : {{ad_per}}</h2></div><br>
+                <div class="g2a"><h2>Genral Store : {{gs_per}}</h2></div><br>
+                <div class="g2a"><h2>other : {{other_per}}</h2></div><br> -->
+                
+                <!-- <ul>
+                    <li><h4>Food : {{food_per}}</h4></li>
+                    <li><h4>Transport : {{tran_per}}</h4></li>
+                    <li><h4>Online : {{online_per}}</h4></li>
+                    <li><h4>travell : {{travell_per}}</h4></li>
+                </ul> -->
+            </div>
+          </div>
+          <!-- section 1 ends -->
+          
+
+          <!-- section 2 starts -->
+          <div class="section2">
+            <br><center><h1>EXPENSE TREND</h1></center>
+            <div class="s1">
+               <center> <img src="/static/expense.jpeg" alt=""></center>
+            </div>
+            <div class="s2">
+                <form  method="post">
+                    <br><br><b><span style = "font-size: 25px;" >Food</span></b><input type="checkbox" name="category" value="Food"><br><br>
+                    <b><span style = "font-size: 25px;">Online</span></b> <input type="checkbox" name="category"  value="Online"><br><br>
+                    <b><span style = "font-size: 25px;">Travel</span></b> <input type="checkbox" name="category"  value="Travel"><br><br>
+                    <b><span style = "font-size: 25px;">Medical</span></b> <input type="checkbox" name="category"  value="Medical"><br><br>
+                    <b><span style = "font-size: 25px;">Friends</span></b> <input type="checkbox" name="category"  value="Friends"><br><br>
+                    <b><span style = "font-size: 25px;">General</span></b> <input type="checkbox" name="category"  value="General"><br><br>
+                    <b><span style = "font-size: 25px;">Academic</span></b> <input type="checkbox" name="category"  value="Academic"><br><br>
+                    <b><span style = "font-size: 25px;">Entertainment</span></b> <input type="checkbox" name="category"  value="Entertainment"><br><br>
+                    <b><span style = "font-size: 25px;">Other</span></b> <input type="checkbox" name="category"  value="Other"><br><br>
+                    <!-- <b><span style = "font-size: 25px;">Email</span></b> <input type="checkbox" name="d" class="d"><br> -->
+                    <br><button type="submit">enter</button>
+            </div>
+          </div>
+    </div>
+    
+</body>
+</html>

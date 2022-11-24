@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/index.css">
+    <style>
+         *{
+        margin: 0%;
+    }
+        .topnav {
+  background-color: rgb(51, 51, 51);
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: rgba(255, 0, 72, 0.3);
+  color: white;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: rgba(255, 0, 0, 0.5);
+  color: white;
+}
+
+body {
+  margin: 0;
+  font-family: "Lato", sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.3;
+  color: #212529;
+  text-align: left;
+  background-color: #fff;
+}
+
+
+    </style>
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
+    <div calss="main">
+        <div class="topnav">
+            <a class="active" href="/">Home</a>
+            <a href="/transaction">Transaction</a>
+            <a href="#contact">Contact</a>
+            <a href="#about">About</a>
+          </div>
+
+          
+        <header class="header d-flex justify-content-center">
+            <div class="container">
+                <div class="row h-100 align-items-center">
+                    <div class="col-md-7">
+                        <div class="header-content">
+                            <h3 class="header-title"><strong class="text-primary">BLUE</strong><span>-BLUE</span></h3>
+                            <h4 class="header-subtitle">Your Own Money Tracking Device </h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi dolores voluptatem voluptatum adipisci vel, beatae unde! Mollitia voluptatum, ullam quisquam optio!</p>
+                            <button class="btn btn-outline-light btn-flat">Explore</button>
+                        </div>  
+                    </div>
+                    <div class="col-md-5 d-none d-md-block">
+                        <form class="header-form">
+                            <!-- <div class="head">Try your <span class="text-primary">Free</span> trial today.</div> -->
+                            <div class="body">
+                                <div class="form-group">
+                                    <input type="date" class="form-control" placeholder="Date*">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Alaise*">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="account*">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="amount*">
+                                </div>
+                                
+                            </div>
+                            <div class="footer">
+                                <button class="btn btn-primary btn-block">SUBMIT</button>
+                            </div>
+                        </form> 
+                    </div>
+                </div>  
+            </div>
+        </header>
+</body>
+</html>
